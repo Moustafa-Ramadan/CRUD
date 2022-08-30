@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="css/all.min.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <div class="w-75 mx-auto shadow rounded mt-5 text-center p-4">
+            <div class="title py-3 text-center">
+                <h1>CRUD Operations With Node.js API</h1>
+            </div>
+<label for="productNameInput">productName:</label>
+<input type="text" oninput="validateProductName()" id="productNameInput" class="form-control w-75 mx-auto mb-2 productName  ">
+<div class="nameAlert alert alert-danger d-none w-75 mx-auto mb-2">Name must be at least 3 characters and 1 number  </div>
+<label for="productPriceInput">productPrice:</label>
+<input type="text" oninput="validateProductPrice()" id="productPriceInput" class="form-control w-75 mx-auto  mb-2 productPrice">
+<div class="priceAlert alert alert-danger d-none w-75 mx-auto mb-2">price must be at least 3 numbers   </div>
+
+<label for="productDescriptionInput">productDescription:</label>
+<textarea type="text" oninput="validateProductDesc()" id="productDescriptionInput" class="form-control w-75 mx-auto  mb-2 productDescription"></textarea>
+<div class="descAlert alert alert-danger d-none w-75 mx-auto mb-2">Name must be at least 3 characters   </div>
+
+<button id="addBtn" onclick="AddProduct();" class="btn btn-outline-info mb-2">Add Product</button>
+<button id="addBtn" onclick="clearForm();" class="btn btn-outline-danger mb-2">Clear</button>
+<button id="editBtn" onclick="update()" class="d-none btn btn-outline-warning mb-2">Update Product</button>
+
+        </div>
+        <div class="search w-75  mx-auto my-4">
+            <input oninput="searchProduct(this.value)" type="text" class="form-control w-75 mx-auto mt-1" placeholder="Search by productName..">
+        </div>
+        <table class="table shadow w-75 mx-auto ">
+            <thead >
+                <th>#</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Discription</th>
+                <th>Update</th>
+                <th>Delete</th>
+            </thead>
+            <tbody id="tableBody">
+                
+            </tbody>
+        </table>
+        <script src="js/main.js"></script>
+    </body>
+</html>
